@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    "reset", :media => "all" %>
+  <%= stylesheet_link_tag    "style", :media => "all" %>
+  <%= stylesheet_link_tag    "qb", :media => "all" %>
+  <%= javascript_include_tag "qb" %>
+  <%= javascript_include_tag "do" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= render 'layouts/qb/header' %>
+   <div class="container">
+    <%= yield %>
+
+	  <!-- <%= debug(params) if Rails.env.development? %> -->
+	</div>	
+  <%= render 'layouts/qb/footer' %>
+</body>
+
+</html>
